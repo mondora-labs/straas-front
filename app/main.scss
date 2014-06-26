@@ -1,0 +1,20 @@
+$ll-font: "Source Sans Pro", sans-serif;
+
+html,
+body {
+  	min-width: 400px;
+  	min-height: 450px;
+	height: 100%;
+	width: 100%;
+	font-family: $ll-font;	
+	overflow: auto;
+	overflow-x: hidden;
+}
+
+*::-webkit-scrollbar {
+	display:none;
+}
+
+* {
+	-ms-overflow-style: none;
+}

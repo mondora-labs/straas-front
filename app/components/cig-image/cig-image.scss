@@ -1,0 +1,20 @@
+// Colours
+$ll-grey: #5e5f5f;
+
+// Circle picture with grey border
+.picture-circle-in-grey {
+	box-sizing: border-box;
+	position: relative;
+	overflow: hidden;
+	border-radius: 50%;
+	border-color: $ll-grey;
+	border-style: solid;
+	padding: 0px;
+	margin: 0px;
+	z-index: 10;
+}
+.picture-circle-in-grey img {
+	position: absolute;
+	padding: 0px;
+	margin: 0px;
+}

@@ -1,0 +1,22 @@
+$ll-green: #2d8632;
+$ll-grey: #5e5f5f;
+$ll-light-grey: #abadad;
+$ll-font: "Source Sans Pro", sans-serif;
+
+// Toggle button
+#mnd-show-sidebar {
+	width: 60px;
+	height: 60px;
+	margin: 20px;
+	border: none;
+	font-size: 40px;
+	cursor: pointer;
+	background-color: $ll-green;
+	color: $ll-grey;
+	text-align: center;
+}
+@media (max-width: 767px) {
+	#mnd-show-sidebar {
+		margin: 10px;
+	}
+}

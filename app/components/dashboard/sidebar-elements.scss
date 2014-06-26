@@ -1,0 +1,76 @@
+$ll-green: #2d8632;
+$ll-grey: #5e5f5f;
+$ll-light-grey: #abadad;
+$ll-font: "Source Sans Pro", sans-serif;
+
+// Sidebar user
+#ll-sidebar-user {
+	padding: 30px 10px 10px 15px; 
+	color: $ll-grey;
+	font-size: 20px;
+	font-weight: 400;
+}
+#ll-sidebar-user .login {
+	cursor: pointer;
+}
+#ll-sidebar-user .login:hover {
+	cursor: pointer;
+	color: $ll-light-grey;
+	transition: color 1s ease, padding 0.5s ease;
+}
+@media (max-height: 580px) {
+	#ll-sidebar-user {
+		padding: 15px 10px 10px 15px;
+	}
+}
+
+// Sidebar footer
+#ll-sidebar-footer {
+	position: absolute;
+	bottom: 0px;
+	padding: 0 10px 10px 15px; 
+	color: $ll-grey;
+}
+
+// Menu
+#mnd-sidebar {
+	.nav {
+		margin-top: 50px;
+		font: {
+			family: $ll-font;
+			size: 25px;
+			weight: normal;
+		}
+		color: #000;
+		line-height: 30px;
+	}
+	.nav li a {
+		padding: 0 15px;
+		color: #000;
+		font-weight: normal;
+		font-weight: 400;
+		transition: color 1s ease, padding 0.5s ease;
+		border-top: 1px solid lighten($ll-green, 1%);
+		border-bottom: 1px solid darken($ll-green, 1%);
+		&:nth-child(1) {
+			border-top: 0; 
+		}
+	}
+	.nav li a:hover {
+		padding: 0 15px 0 20px;
+		color: $ll-light-grey;
+		background-color: initial;
+	}
+	.nav-second-level {
+		margin-top: 0px;
+	}
+	.nav-second-level li a {
+		font-weight: 200;
+		font-size: 20px;
+	}
+	@media (max-height: 580px) {
+		.nav {
+			margin-top: 30px;
+		}
+	}
+}
