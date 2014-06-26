@@ -4,14 +4,16 @@
 
 AngularJS as front-end framework
 
-Meteor as backend framework. (see []loyall-back](https://bitbucket.org/loyall/loyall-back))
+Meteor as backend framework. (see
+[loyall-back](https://bitbucket.org/loyall/loyall-back))
 
 Asteroid as link between the two.
 
 ##How to set up the dev environment
 
-Make sure you have node and npm installed. If you haven't, I
-recommend installing them via [homebrew](http://brew.sh/):
+Make sure you have `node` and `npm` installed. If you
+haven't, I recommend installing them via
+[homebrew](http://brew.sh/):
 
     brew install node
 
