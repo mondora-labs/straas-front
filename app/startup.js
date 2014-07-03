@@ -174,7 +174,36 @@ angular.module("loyall")
 		}
 	});
 
+	$stateProvider.state("esercenti", {
+                url: "/esercenti",
+                parent: "root",
+                templateUrl: "pages/esercenti/esercenti.html",
+                controller: "EsercentiController",
+                resolve: {
+                        esercentiSub: ["TimeoutPromiseService", function (TimeoutPromiseService) {
+                                var sub = Loyall.subscribe("esercenti");
+                                return TimeoutPromiseService.timeoutPromise(sub.ready, GIVE_UP_DELAY);
+                        }]
+                }
+    });
 
+
+    $stateProvider.state("detailEsercente", {
+        url: "/esercenti/:esercenteId",
+        parent: "root",
+        templateUrl: "pages/esercenti/detail/detailEsercente.html",
+        controller: "detailEsercenteController",
+        resolve: {
+            esercenteIdSub: ["$stateParams", "TimeoutPromiseService", function ($stateParams, TimeoutPromiseService) {
+                var sub = Loyall.subscribe("singleEsercente", $stateParams.esercenteId);
+                return TimeoutPromiseService.timeoutPromise(sub.ready, GIVE_UP_DELAY);
+            }]
+        },
+        onExit: ["esercenteIdSub", function (esercenteIdSub) {
+            Loyall.subscriptions[esercenteIdSub].stop();
+        }],
+        public: true
+    });
 
 	///////////////
 	// Otherwise //

@@ -1,0 +1,34 @@
+==Esercente
+esercenti.insert( {
+                    "_id":"53b3b5bd47e74c62330a1f58",
+                    "ragioneSociale": "Il Losco",
+                    "logo": "losco.png",
+                    "coordinate":"52N83E",
+                    "indirizzo":{
+                        "via":"via Emilia",
+                        "civico":"1",
+                        "cap":"20141",
+                        "comune":"San Donato",
+                        "provincia":"MI",
+                        "nazione":"IT"
+                    },
+                    "mail":"losco@gmail.com",
+                    "telefono":"02-654321",
+                    "tipologia":"Bar",
+                    "website":"www.illosco.com",
+                    "fbPage":"www.facebook.com/illosco",
+                    "titolare":"Mario Rossi",
+                            "stampCard":[{
+                         "nome":"10 Birre",
+                         "scadenza":"08/10/2014"
+                               },
+                           {
+                         "nome":"10 Panini",
+                         "scadenza":"01/09/2014"
+                           }
+                    ]
+
+                 });
+
+
+

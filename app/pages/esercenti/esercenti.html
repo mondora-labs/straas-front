@@ -1,0 +1,24 @@
+<h1>I Negozi LoyAll</h1>
+
+<br clear="all"/>
+
+<table>
+    <tr>
+        <th></th>
+        <th>Ragione Sociale</th>
+        <th>Coordinate</th>
+        <th>Tipologia</th>
+    </tr>
+    <tr ng-repeat="esercente in esercenti" ui-sref="detailEsercente({esercenteId:esercente._id})" >
+
+        <td data-id="{{esercente._id}}" >
+            <img ng-src="{{'dist/images/'+esercente.logo}}"/>
+        </td>
+        <td>{{esercente.ragioneSociale}}</td>
+        <td>{{esercente.coordinate}}</td>
+        <td>{{esercente.tipologia}}</td>
+    </tr>
+
+</table>
+
+
