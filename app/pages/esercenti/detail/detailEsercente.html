@@ -1,8 +1,37 @@
-dettaglio
+
+    <h1>{{esercente.ragioneSociale}}</h1>
+
+    <br clear="all"/>
+    <img ng-src="{{'dist/images/'+esercente.logo}}"/>
 
 
-        <img ng-src="{{'dist/images/'+esercente.logo}}"/>
+    {{esercente.tipologia}}
+    <br>
+    {{esercente.indirizzo.via}}, {{esercente.indirizzo.civico}}
+    <br>
+    {{esercente.indirizzo.cap}} {{esercente.indirizzo.comune}} ({{esercente.indirizzo.provincia}})
 
-    {{esercente.ragioneSociale}},
-    {{esercente.coordinate}},
-    {{esercente.tipologia}},
+    <br>
+    {{esercente.mail}}
+    <br>
+    {{esercente.telefono}}
+    <br>
+    {{esercente.website}}
+    <br>
+    {{esercente.fbPage}}
+
+    <table>
+        <tr>
+            <th>Promozione</th>
+            <th>Scadenza</th>
+        </tr>
+        <tr ng-repeat="stampCard in esercente.stampCard"">
+            <td>
+                {{stampCard.nome}}
+            </td>
+            <td>
+                {{stampCard.scadenza}}
+            </td>
+        </tr>
+    </table>
+</tr>
