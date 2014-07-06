@@ -1,4 +1,4 @@
-angular.module("loyall.pages")
+angular.module("straas.pages")
 
 .controller("UsersController", ["$scope", function ($scope) {
 	var usersRQ = Users.reactiveQuery({});
@@ -21,17 +21,17 @@ angular.module("loyall.pages")
 .controller("UserManagementController", ["$scope", function ($scope) {
 
 	$scope.onRoleAdd = function (role) {
-		Loyall.call("addUserToRole", $scope.selectedUser._id, role);
+		Straas.call("addUserToRole", $scope.selectedUser._id, role);
 	};
 	$scope.onRoleRemove = function (role) {
-		Loyall.call("removeUserFromRole", $scope.selectedUser._id, role);
+		Straas.call("removeUserFromRole", $scope.selectedUser._id, role);
 	};
 
 	$scope.onGroupAdd = function (group) {
-		Loyall.call("addUserToGroup", $scope.selectedUser._id, group);
+		Straas.call("addUserToGroup", $scope.selectedUser._id, group);
 	};
 	$scope.onGroupRemove = function (group) {
-		Loyall.call("removeUserFromGroup", $scope.selectedUser._id, group);
+		Straas.call("removeUserFromGroup", $scope.selectedUser._id, group);
 	};
 
 }]);

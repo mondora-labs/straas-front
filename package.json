@@ -1,7 +1,7 @@
 {
-  "name": "loyall",
+  "name": "straas",
   "version": "0.0.1",
-  "description": "loyall app",
+  "description": "straas app",
   "main": "builds/web/index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

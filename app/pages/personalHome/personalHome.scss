@@ -1,7 +1,7 @@
 // Colours
-$ll-green: #2d8632;
-$ll-grey: #5e5f5f;
-$ll-light-grey: #abadad;
+$st-green: #2d8632;
+$st-grey: #5e5f5f;
+$st-light-grey: #abadad;
 
 //page Css
 .personal-home-container {
@@ -18,20 +18,20 @@ $ll-light-grey: #abadad;
 	height: 100px;
 	width: 100px;
 	padding-top: 20px;
-	background: $ll-green;
+	background: $st-green;
 	text-align: center;
 	font-size: 40px;
 	border-radius: 25px;
 	box-shadow:4px 4px 6px #414141;
-	color: $ll-grey;
+	color: $st-grey;
 }
 .personalHomeApp:hover {
-	color: $ll-grey;
+	color: $st-grey;
 }
 .personalHome-h2{
 	text-align: center;
-	border-bottom: solid 1px $ll-light-grey;
-	box-shadow:0px 4px 4px -3px $ll-light-grey;
+	border-bottom: solid 1px $st-light-grey;
+	box-shadow:0px 4px 4px -3px $st-light-grey;
 }
 .app-box {
 	position: relative;

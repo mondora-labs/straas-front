@@ -1,4 +1,4 @@
-angular.module("loyall.pages")
+angular.module("straas.pages")
 
 .controller("AdminController", ["$scope", "$interval", function ($scope, $interval) {
 

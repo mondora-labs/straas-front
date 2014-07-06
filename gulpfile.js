@@ -61,7 +61,7 @@ var buildAppTemplates = function (dest, minify) {
     var deferred = Q.defer();
     var step = gulp.src(["app/**/*.html", "!app/main.html"])
         .pipe(plugins.ngHtml2js({
-            moduleName: "loyall.templates"
+            moduleName: "straas.templates"
         }))
         .pipe(plugins.concat("app.templates.js"))
         .pipe(gulp.dest(dest));

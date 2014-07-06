@@ -1,4 +1,4 @@
-angular.module("loyall.pages")
+angular.module("straas.pages")
 
 .controller("PersonalHomeController", ["$scope", function ($scope) {
 

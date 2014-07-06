@@ -1,9 +1,9 @@
 {
-  "name": "loyall",
+  "name": "straas",
   "version": "0.0.1",
   "authors": [
   ],
-  "description": "loyall app",
+  "description": "straas app",
   "main": "builds/web/index.html",
   "keywords": [],
   "ignore": [
