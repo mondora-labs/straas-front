@@ -1,4 +1,4 @@
-angular.module("loyall.components")
+angular.module("straas.components")
 
 .controller("SidebarController", ["$scope", "$state", function ($scope, $state) {
 

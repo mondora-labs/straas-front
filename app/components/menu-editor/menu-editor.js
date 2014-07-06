@@ -1,6 +1,6 @@
-angular.module("loyall.components")
+angular.module("straas.components")
 
-.directive("llMenuEditor", [function () {
+.directive("stMenuEditor", [function () {
 	return {
 		restrict: "EA",
 		templateUrl: "components/menu-editor/menu-editor.html",

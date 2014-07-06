@@ -1,10 +1,10 @@
 <div ng-if="!noTags()">
-	<span class="label label-default ll-tag" ng-repeat="tag in tags">
+	<span class="label label-default st-tag" ng-repeat="tag in tags">
 		{{tag}}
-		<i class="fa fa-times ll-clickable" ng-click="delTag($index)"></i>
+		<i class="fa fa-times st-clickable" ng-click="delTag($index)"></i>
 	</span>
-	<div class="ll-vsp-4"></div>
-	<div class="ll-vsp-4"></div>
+	<div class="st-vsp-4"></div>
+	<div class="st-vsp-4"></div>
 </div>
 <div class="input-group">
 	<input class="form-control" placeholder="{{placeholder}}" ng-model="newTag" ng-keyup="addTag($event)" />

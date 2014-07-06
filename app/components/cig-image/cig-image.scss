@@ -1,5 +1,5 @@
 // Colours
-$ll-grey: #5e5f5f;
+$st-grey: #5e5f5f;
 
 // Circle picture with grey border
 .picture-circle-in-grey {
@@ -7,7 +7,7 @@ $ll-grey: #5e5f5f;
 	position: relative;
 	overflow: hidden;
 	border-radius: 50%;
-	border-color: $ll-grey;
+	border-color: $st-grey;
 	border-style: solid;
 	padding: 0px;
 	margin: 0px;

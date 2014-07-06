@@ -1,100 +1,100 @@
 // Misc
-.ll-clickable {
+.st-clickable {
 	cursor: pointer;
 }
-.ll-undecorated-a {
+.st-undecorated-a {
 	color: inherit;
 }
-.ll-undecorated-a:hover {
+.st-undecorated-a:hover {
 	text-decoration: none;
 	color: inherit;
 }
-.ll-ignore-mouse-input {
+.st-ignore-mouse-input {
 	pointer-events: none;
 }
-.ll-top-most {
+.st-top-most {
 	z-index: 1000;
 }
-.ll-fullsize {
+.st-fullsize {
 	position: relative;
 	width: 100%;
 	height: 100%;
 }
-.ll-block {
+.st-block {
 	display: block;
 }
-.ll-inline-block {
+.st-inline-block {
 	display: inline-block;
 }
-.ll-valign-middle {
+.st-valign-middle {
 	vertical-align: middle;
 }
 
 // Vertical spaces
-.ll-vsp-4 {
+.st-vsp-4 {
 	width: 100%;
 	height: 4px;
 }
-.ll-vsp-6 {
+.st-vsp-6 {
 	width: 100%;
 	height: 6px;
 }
-.ll-vsp-16 {
+.st-vsp-16 {
 	width: 100%;
 	height: 16px;
 }
-.ll-vsp-64 {
+.st-vsp-64 {
 	width: 100%;
 	height: 64px;
 }
 
 // Horizontal alignement classes
-.ll-width-80 {
+.st-width-80 {
 	width: 80px;
 }
-span.ll-width-80 {
+span.st-width-80 {
 	display: inline-block;
 }
-.ll-width-60 {
+.st-width-60 {
 	width: 60px;
 }
-span.ll-width-60 {
+span.st-width-60 {
 	display: inline-block;
 }
-.ll-width-50 {
+.st-width-50 {
 	width: 50px;
 }
-span.ll-width-50 {
+span.st-width-50 {
 	display: inline-block;
 }
-.ll-width-40 {
+.st-width-40 {
 	width: 40px;
 }
-span.ll-width-40 {
+span.st-width-40 {
 	display: inline-block;
 }
-.ll-width-30 {
+.st-width-30 {
 	width: 30px;
 }
-span.ll-width-30 {
+span.st-width-30 {
 	display: inline-block;
 }
-.ll-width-20 {
+.st-width-20 {
 	width: 20px;
 }
-span.ll-width-20 {
+span.st-width-20 {
 	display: inline-block;
 }
-.ll-width-15 {
+.st-width-15 {
 	width: 15px;
 }
-span.ll-width-15 {
+span.st-width-15 {
 	display: inline-block;
 }
-.ll-width-10 {
+.st-width-10 {
 	width: 10px;
 }
-span.ll-width-10 {
+span.st-width-10 {
 	display: inline-block;
 }
 
@@ -111,15 +111,15 @@ span.ll-width-10 {
 }
 
 // Forms
-.ll-input-vertical-group input {
+.st-input-vertical-group input {
 	border-radius: 0px;
 	border-bottom-width: 0px;
 }
-.ll-input-vertical-group input:first-child {
+.st-input-vertical-group input:first-child {
 	border-top-left-radius: 4px;
 	border-top-right-radius: 4px;
 }
-.ll-input-vertical-group input:last-child {
+.st-input-vertical-group input:last-child {
 	border-bottom-left-radius: 4px;
 	border-bottom-right-radius: 4px;
 	border-bottom-width: 1px;

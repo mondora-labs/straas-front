@@ -1,4 +1,4 @@
-angular.module("loyall.components")
+angular.module("straas.components")
 
 .factory("DiffingService", [function () {
 	var getDiffFunction = function (baseObject) {

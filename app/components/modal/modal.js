@@ -1,6 +1,6 @@
-angular.module("loyall.components")
+angular.module("straas.components")
 
-.directive("llModal", [function () {
+.directive("stModal", [function () {
 	return {
 		restrict: "EA",
 		templateUrl: "components/modal/modal.html",

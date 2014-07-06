@@ -1,4 +1,4 @@
-$ll-font: "Source Sans Pro", sans-serif;
+$st-font: "Source Sans Pro", sans-serif;
 
 html,
 body {
@@ -6,7 +6,7 @@ body {
   	min-height: 450px;
 	height: 100%;
 	width: 100%;
-	font-family: $ll-font;	
+	font-family: $st-font;	
 	overflow: auto;
 	overflow-x: hidden;
 }

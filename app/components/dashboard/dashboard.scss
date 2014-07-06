@@ -1,7 +1,7 @@
-$ll-green: #2d8632;
-$ll-grey: #5e5f5f;
-$ll-light-grey: #abadad;
-$ll-font: "Source Sans Pro", sans-serif;
+$st-green: #2d8632;
+$st-grey: #5e5f5f;
+$st-light-grey: #abadad;
+$st-font: "Source Sans Pro", sans-serif;
 
 // Sidebar
 #mnd-sidebar {
@@ -14,8 +14,8 @@ $ll-font: "Source Sans Pro", sans-serif;
 	width: 300px;
 	overflow: hidden;
 	z-index: 1;
-	background: $ll-green;
-	border-right: 2px solid $ll-grey;
+	background: $st-green;
+	border-right: 2px solid $st-grey;
 	transform: translate3d(0, 0, 0);
 	transform: translateX(0px);
 	transition: transform 0.4s ease 0s;
@@ -45,8 +45,8 @@ $ll-font: "Source Sans Pro", sans-serif;
 	width: 100px;
 	z-index: 100;
 	margin: 0px;
-	background-color: $ll-green;
-	border-right: 2px solid $ll-grey;
+	background-color: $st-green;
+	border-right: 2px solid $st-grey;
 	text-align: center;
 	transform: translate3d(0, 0, 0);
 	transform: translateX(0px);
@@ -61,7 +61,7 @@ $ll-font: "Source Sans Pro", sans-serif;
 		min-height: 0px;
 		width: 100%;
 		text-align: left;
-		border-bottom: 2px solid $ll-grey;
+		border-bottom: 2px solid $st-grey;
 		border-right: 0px;
 	}
 	#mnd-toggle-sidebar.sidebar-open{

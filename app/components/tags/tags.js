@@ -1,6 +1,6 @@
-angular.module("loyall.components")
+angular.module("straas.components")
 
-.directive("llTags", [function () {
+.directive("stTags", [function () {
 	return {
 		restrict: "EA",
 		templateUrl: "components/tags/tags.html",

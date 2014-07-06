@@ -25,11 +25,11 @@ var GIVE_UP_DELAY = 30000;
 		cfg = config.prod;
 	}
 	var deferred = Q.defer();
-	window.Loyall = new Asteroid(cfg.host, cfg.ssl, cfg.debug);
-	Loyall.on("connected", function () {
+	window.Straas = new Asteroid(cfg.host, cfg.ssl, cfg.debug);
+	Straas.on("connected", function () {
 		deferred.resolve();
 	});
-	window.LOYALL_CONNECTED = deferred.promise.timeout(GIVE_UP_DELAY);
+	window.STRAAS_CONNECTED = deferred.promise.timeout(GIVE_UP_DELAY);
 })();
 
 
@@ -38,7 +38,7 @@ var GIVE_UP_DELAY = 30000;
 // Router configuration //
 //////////////////////////
 
-angular.module("loyall")
+angular.module("straas")
 
 .factory("TimeoutPromiseService", ["$q", "$timeout", "$state", function ($q, $timeout, $state) {
 	var timeoutPromise = function (promise, t) {
@@ -73,9 +73,9 @@ angular.module("loyall")
 		templateUrl: "root.html",
 		resolve: {
 			resumingLogin: ["TimeoutPromiseService", "$state", function (TimeoutPromiseService, $state) {
-				return LOYALL_CONNECTED
+				return STRAAS_CONNECTED
 					.then(function () {
-						var resProm = Loyall.resumeLoginPromise;
+						var resProm = Straas.resumeLoginPromise;
 						if (resProm.isPending()) {
 							return TimeoutPromiseService.timeoutPromise(resProm, GIVE_UP_DELAY)
 								.finally(function () {
@@ -85,7 +85,7 @@ angular.module("loyall")
 						return true;
 					})
 					.then(function () {
-						var sub = Loyall.subscribe("configurations");
+						var sub = Straas.subscribe("configurations");
 						return TimeoutPromiseService.timeoutPromise(sub.ready, GIVE_UP_DELAY);
 					})
 					.fail(function () {
@@ -168,42 +168,11 @@ angular.module("loyall")
 		controller: "UsersController",
 		resolve: {
 			usersAdminSub: ["TimeoutPromiseService", function (TimeoutPromiseService) {
-				var sub = Loyall.subscribe("usersAdmin");
+				var sub = Straas.subscribe("usersAdmin");
 				return TimeoutPromiseService.timeoutPromise(sub.ready, GIVE_UP_DELAY);
 			}]
 		}
 	});
-
-	$stateProvider.state("esercenti", {
-                url: "/esercenti",
-                parent: "root",
-                templateUrl: "pages/esercenti/esercenti.html",
-                controller: "EsercentiController",
-                resolve: {
-                        esercentiSub: ["TimeoutPromiseService", function (TimeoutPromiseService) {
-                                var sub = Loyall.subscribe("esercenti");
-                                return TimeoutPromiseService.timeoutPromise(sub.ready, GIVE_UP_DELAY);
-                        }]
-                }
-    });
-
-
-    $stateProvider.state("detailEsercente", {
-        url: "/esercenti/:esercenteId",
-        parent: "root",
-        templateUrl: "pages/esercenti/detail/detailEsercente.html",
-        controller: "detailEsercenteController",
-        resolve: {
-            esercenteIdSub: ["$stateParams", "TimeoutPromiseService", function ($stateParams, TimeoutPromiseService) {
-                var sub = Loyall.subscribe("singleEsercente", $stateParams.esercenteId);
-                return TimeoutPromiseService.timeoutPromise(sub.ready, GIVE_UP_DELAY);
-            }]
-        },
-        onExit: ["esercenteIdSub", function (esercenteIdSub) {
-            Loyall.subscriptions[esercenteIdSub].stop();
-        }],
-        public: true
-    });
 
 	///////////////
 	// Otherwise //
@@ -232,10 +201,10 @@ angular.module("loyall")
 		}
 	};
 
-	Configurations = Loyall.createCollection("configurations");
-	Users = Loyall.createCollection("users");
+	Configurations = Straas.getCollection("configurations");
+	Users = Straas.getCollection("users");
 
-	Loyall.on("login", function (userId) {
+	Straas.on("login", function (userId) {
 		$rootScope.loggedInUserQuery = Users.reactiveQuery({_id: userId});
 		$rootScope.safeApply(function () {
 			$rootScope.user = $rootScope.loggedInUserQuery.result[0];
@@ -247,7 +216,7 @@ angular.module("loyall")
 			});
 		});
 	});
-	Loyall.on("logout", function () {
+	Straas.on("logout", function () {
 		$rootScope.safeApply(function () {
 			delete $rootScope.user;
 			$rootScope.signedIn = false;
@@ -272,9 +241,9 @@ angular.module("loyall")
 
 .controller("MainController", ["$scope", function ($scope) {
 	$scope.login = function () {
-		Loyall.loginWithFacebook();
+		Straas.loginWithGithub();
 	};
 	$scope.logout = function () {
-		Loyall.logout();
+		Straas.logout();
 	};
 }]);

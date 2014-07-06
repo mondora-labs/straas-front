@@ -1,6 +1,6 @@
-angular.module("loyall.components")
+angular.module("straas.components")
 
-.directive("llCigImage", [function () {
+.directive("stCigImage", [function () {
 	return {
 		restrict: "EA",
 		scope: {

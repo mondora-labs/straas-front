@@ -1,7 +1,7 @@
-$ll-green: #2d8632;
-$ll-grey: #5e5f5f;
-$ll-light-grey: #abadad;
-$ll-font: "Source Sans Pro", sans-serif;
+$st-green: #2d8632;
+$st-grey: #5e5f5f;
+$st-light-grey: #abadad;
+$st-font: "Source Sans Pro", sans-serif;
 
 // Toggle button
 #mnd-show-sidebar {
@@ -11,8 +11,8 @@ $ll-font: "Source Sans Pro", sans-serif;
 	border: none;
 	font-size: 40px;
 	cursor: pointer;
-	background-color: $ll-green;
-	color: $ll-grey;
+	background-color: $st-green;
+	color: $st-grey;
 	text-align: center;
 }
 @media (max-width: 767px) {

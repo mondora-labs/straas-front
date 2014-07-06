@@ -23,24 +23,25 @@
 
 // Create app modules
 try {
-	angular.module("loyall.templates");
+	angular.module("straas.templates");
 } catch (e) {
-	angular.module("loyall.templates", []);
+	angular.module("straas.templates", []);
 }
-angular.module("loyall.components", []);
-angular.module("loyall.pages", []);
+angular.module("straas.components", []);
+angular.module("straas.pages", []);
 
-angular.module("loyall", [
+angular.module("straas", [
 
 	// Third party modules
 	"ui.bootstrap",
 	"ui.router",
+	"ui.tree",
 	"mnd.dashboard",
 	"ngSanitize",
 
 	// App modules
-	"loyall.templates",
-	"loyall.components",
-	"loyall.pages"
+	"straas.templates",
+	"straas.components",
+	"straas.pages"
 
 ]);

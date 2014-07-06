@@ -1,15 +1,15 @@
 <div mnd-sidebar ng-controller="SidebarController">
 	<div name="before">
-		<div id="ll-sidebar-user">
+		<div id="st-sidebar-user">
 			<div ng-if="user" class="row">
-				<a class="col-xs-4 ll-undecorated-a" ui-sref="profile()">
-					<div ll-cig-image source="user.profile.pictureUrl" size="70"></div>
+				<a class="col-xs-4 st-undecorated-a" ui-sref="profile()">
+					<div st-cig-image source="user.profile.pictureUrl" size="70"></div>
 				</a>
 				<div class="col-xs-8">
-					<div class="ll-vsp-6"></div>
-					<a class="ll-undecorated-a" ui-sref="profile()">{{user.profile.name}}</a>
+					<div class="st-vsp-6"></div>
+					<a class="st-undecorated-a" ui-sref="profile()">{{user.profile.name}}</a>
 					<br />
-					<span ng-click="logout()" class="logout ll-clickable">
+					<span ng-click="logout()" class="logout st-clickable">
 						<small><i>Logout</i></small>
 					</span>
 				</div>
@@ -20,7 +20,7 @@
 		</div>	
 	</div>
 	<div name="after">
-		<div id="ll-sidebar-footer">
+		<div id="st-sidebar-footer">
 			================<br />
 			FOOTER GOES HERE<br />
 			================

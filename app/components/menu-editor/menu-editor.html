@@ -1,22 +1,22 @@
-<accordion class="ll-menu-accordion">
+<accordion class="st-menu-accordion">
 	<div ng-repeat="item in items">
 
-		<accordion-group class="ll-menu-accordion-heading">
+		<accordion-group class="st-menu-accordion-heading">
 			<accordion-heading>
 
 				{{item.title}}
 
-				<span class="pull-right ll-clickable ll-width-20 text-center" ng-click="menu.deleteItem($index)">
+				<span class="pull-right st-clickable st-width-20 text-center" ng-click="menu.deleteItem($index)">
 					<i class="fa fa-trash-o"></i>
 				</span>
-				<span class="pull-right ll-width-20">
+				<span class="pull-right st-width-20">
 					&nbsp;
 				</span>
-				<span class="pull-right ll-clickable ll-width-20 text-center" ng-click="menu.moveUp($index, $event)">
+				<span class="pull-right st-clickable st-width-20 text-center" ng-click="menu.moveUp($index, $event)">
 					<i ng-if="$index !== 0" class="fa fa-caret-up"></i>
 					<i ng-if="$index === 0">&nbsp;</i>
 				</span>
-				<span class="pull-right ll-clickable ll-width-20 text-center" ng-click="menu.moveDown($index, $event)">
+				<span class="pull-right st-clickable st-width-20 text-center" ng-click="menu.moveDown($index, $event)">
 					<i ng-if="$index !== (items.length - 1)" class="fa fa-caret-down"></i>
 					<i ng-if="$index === (items.length - 1)">&nbsp;</i>
 				</span>
@@ -84,22 +84,22 @@
 
 		</accordion-group>
 
-		<accordion-group ng-if="item.type === 'submenu'" ng-repeat="subitem in item.items" class="ll-menu-accordion-heading ll-menu-accordion-indented">
+		<accordion-group ng-if="item.type === 'submenu'" ng-repeat="subitem in item.items" class="st-menu-accordion-heading st-menu-accordion-indented">
 			<accordion-heading>
 
 				{{subitem.title}}
 
-				<span class="pull-right ll-clickable ll-width-20 text-center" ng-click="menu.deleteSubitem(item, $index)">
+				<span class="pull-right st-clickable st-width-20 text-center" ng-click="menu.deleteSubitem(item, $index)">
 					<i class="fa fa-trash-o"></i>
 				</span>
-				<span class="pull-right ll-width-20">
+				<span class="pull-right st-width-20">
 					&nbsp;
 				</span>
-				<span class="pull-right ll-clickable ll-width-20 text-center" ng-click="menu.moveSubitemUp(item, $index, $event)">
+				<span class="pull-right st-clickable st-width-20 text-center" ng-click="menu.moveSubitemUp(item, $index, $event)">
 					<i ng-if="$index !== 0" class="fa fa-caret-up"></i>
 					<i ng-if="$index === 0">&nbsp;</i>
 				</span>
-				<span class="pull-right ll-clickable ll-width-20 text-center" ng-click="menu.moveSubitemDown(item, $index, $event)">
+				<span class="pull-right st-clickable st-width-20 text-center" ng-click="menu.moveSubitemDown(item, $index, $event)">
 					<i ng-if="$index !== (item.items.length - 1)" class="fa fa-caret-down"></i>
 					<i ng-if="$index === (item.items.length - 1)">&nbsp;</i>
 				</span>
