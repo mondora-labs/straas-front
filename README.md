@@ -1,4 +1,4 @@
-#loyall-front
+#straas-front
 
 ##Main components
 
